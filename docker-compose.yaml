@@ -1,9 +1,5 @@
-version: '3'
-services:
-   web:
-     build: .
-     image: nginx:alpine
-     restart: always
-     port: 
-       - 8000:80
-    
+FROM centos:7
+MAINTAINER admin
+RUN yum -y install httpd
+EXPOSE 80
+CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
