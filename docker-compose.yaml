@@ -5,5 +5,4 @@ services:
      restart: always
      port: 
        - 8000:80
-     Volumes:
-       - ./dockerfile:/usr/share/nginx/html/index.html
+    
